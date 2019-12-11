@@ -11,6 +11,13 @@ To trigger this ui page from a client script, insert the below code in to your s
   - if it's a ui action could be gsftSubmit
   - could be GlideAjax
 
+# Install instructions
+- download the file sys_ui_page_823112c3db2100108988dde748961992.xml in this repository
+- visit (your-instance).service-now.com/sys_ui_page_list.do
+- open the context menu from the list header 
+- select "Import XML'
+- ![Screenshot of context menu](contextmenu.png)
+- upload the file
 
 # Client script code
 Copy the below code to your Client Script or UI Action and update the variables
