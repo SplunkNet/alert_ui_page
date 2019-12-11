@@ -13,6 +13,7 @@ To trigger this ui page from a client script, insert the below code in to your s
 
 
 # Copy the below code to your Client Script or UI Action and update the variables
+'''
 var title = 'Placeholder Title'; //add a title to show at the top of the modal window, do not include it in the HTML below
 var message = 'Placeholder Message' //add a message to be shown within the alert
 var linkText = '';//include the link text you want to show
@@ -30,3 +31,4 @@ gm.setPreference('sysparm_link_url',linkUrl);
 gm.setPreference('sysparm_neg_btn',negBtn);
 gm.setPreference('sysparm_pos_btn',posBtn);
 gm.render();
+'''
