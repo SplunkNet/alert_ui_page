@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2019-12-11 09:11:37">
+<sys_ui_page action="INSERT_OR_UPDATE">
+<category>general</category>
+<client_script/>
+<description>//This page is designed to be used in combination with a GlideModal instance to make JavaScript alerts more attractive.
+//To trigger this ui page from a client script, insert the below code in to your script where you would use an 'alert', or it can also 'confirm' for UI Actions.
+
+//##TO ADD IN THE FUTURE##
+// - btn colours
+// - posBtn processing (need to think about why someone would show an alert, what might they be trying to do)
+//        - if it's a client script could be form changes, abort action
+//        - if it's a ui action could be gsftSubmit
+//        - could be GlideAjax
+
+
+//## COPY THIS CODE TO YOUR CLIENT SCRIPT AND UPDATE THE VARIABLES ##
+var title = 'Placeholder Title'; //add a title to show at the top of the modal window, do not include it in the HTML below
+var message = 'Placeholder Message' //add a message to be shown within the alert
+var linkText = '';//include the link text you want to show
+var linkUrl = '';//include the absolute or relative url you want the link to go to
+var negBtn = 'Cancel'; //text to show on the negative button eg. 'Cancel'
+var posBtn = 'OK'; //text to show on the positive button eg. 'Confirm' or 'OK'
+var hideClose = false; //set true or false to include or exclude the 'X' from the top right of the modal window
+var width = 300; //interger for the width of the modal. 300 is standard for alert, if you want a log alert without a scroll bar you will need to make it atleast 350 wide due to heisenberg styling
+
+var gm = new GlideModal('alert_page',hideClose,width);
+gm.setTitle(title);
+gm.setPreference('sysparm_message',message);
+gm.setPreference('sysparm_link_text',linkText);
+gm.setPreference('sysparm_link_url',linkUrl);
+gm.setPreference('sysparm_neg_btn',negBtn);
+gm.setPreference('sysparm_pos_btn',posBtn);
+gm.render();</description>
+<direct>false</direct>
+<endpoint/>
+<html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<g:inline template="heisenberg_output.xml" type="css"/>
+	<g:requires name="scripts/lib/jquery2_includes.js"/>
+	<g:requires name="scripts/heisenberg/heisenberg_all.js" includes="true"/>
+	
+	<!-- convert preferences to jelly variables -->
+	<j:set var="jvar_msg" value="${sysparm_message}"/>
+	<j:set var="jvar_link_text" value="${sysparm_link_text}"/>
+	<j:set var="jvar_link_url" value="${sysparm_link_url}"/>
+	<j:set var="jvar_neg_btn" value="${sysparm_neg_btn}"/>
+	<j:set var="jvar_pos_btn" value="${sysparm_pos_btn}"/>
+	
+	<div class="modal-body">
+		<j:if test="${jvar_msg.length()!=0}">
+			<p>${jvar_msg}</p>
+		</j:if>
+		<j:if test="${jvar_link_text.length()!=0 &amp;&amp; jvar_link_url.length()!=0}">
+			<a href="${jvar_link_url}" target="_blank">${jvar_link_text}</a>
+		</j:if>
+	</div>
+	<footer class="modal-footer flex">
+		<j:if test="${jvar_neg_btn.length()!=0}">
+			<button data-dismiss="modal" class="btn btn-default">${jvar_neg_btn}</button>
+		</j:if>
+		<j:if test="${jvar_pos_btn.length()!=0}">
+			<button data-dismiss="modal" class="btn btn-primary">${jvar_pos_btn}</button>
+		</j:if>
+	</footer>
+</j:jelly>]]></html>
+<name>alert_page</name>
+<processing_script/>
+<sys_class_name>sys_ui_page</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2019-12-10 19:02:09</sys_created_on>
+<sys_id>823112c3db2100108988dde748961992</sys_id>
+<sys_mod_count>40</sys_mod_count>
+<sys_name>alert_page</sys_name>
+<sys_package display_value="Global" source="global">global</sys_package>
+<sys_policy/>
+<sys_scope display_value="Global">global</sys_scope>
+<sys_update_name>sys_ui_page_823112c3db2100108988dde748961992</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2019-12-11 09:07:32</sys_updated_on>
+</sys_ui_page>
+</unload>
