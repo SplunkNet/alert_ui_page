@@ -12,7 +12,8 @@ To trigger this ui page from a client script, insert the below code in to your s
 //        - could be GlideAjax
 
 
-# Copy the below code to your Client Script or UI Action and update the variables
+# Client script code
+Copy the below code to your Client Script or UI Action and update the variables
 ```
 var title = 'Placeholder Title'; //add a title to show at the top of the modal window, do not include it in the HTML below
 var message = 'Placeholder Message' //add a message to be shown within the alert
