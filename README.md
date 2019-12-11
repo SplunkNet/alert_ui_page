@@ -4,7 +4,7 @@ XML for ServiceNow UI Page for an attractive, modal alert
 This page is designed to be used in combination with a GlideModal instance to make JavaScript alerts more attractive.
 To trigger this ui page from a client script, insert the below code in to your script where you would use an 'alert', or it can also 'confirm' for UI Actions.
 
-# TO ADD IN THE FUTURE
+# Future functionality
 // - btn colours
 // - posBtn processing (need to think about why someone would show an alert, what might they be trying to do)
 //        - if it's a client script could be form changes, abort action
@@ -12,7 +12,7 @@ To trigger this ui page from a client script, insert the below code in to your s
 //        - could be GlideAjax
 
 
-# COPY THIS CODE TO YOUR CLIENT SCRIPT / UI ACTION AND UPDATE THE VARIABLES
+# Copy the below code to your Client Script or UI Action and update the variables
 var title = 'Placeholder Title'; //add a title to show at the top of the modal window, do not include it in the HTML below
 var message = 'Placeholder Message' //add a message to be shown within the alert
 var linkText = '';//include the link text you want to show
