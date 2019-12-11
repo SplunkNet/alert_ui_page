@@ -5,11 +5,11 @@ This page is designed to be used in combination with a GlideModal instance to ma
 To trigger this ui page from a client script, insert the below code in to your script where you would use an 'alert', or it can also 'confirm' for UI Actions.
 
 # Future functionality
-// - btn colours
-// - posBtn processing (need to think about why someone would show an alert, what might they be trying to do)
-//        - if it's a client script could be form changes, abort action
-//        - if it's a ui action could be gsftSubmit
-//        - could be GlideAjax
+- btn colours
+- posBtn processing (need to think about why someone would show an alert, what might they be trying to do)
+  - if it's a client script could be form changes, abort action
+  - if it's a ui action could be gsftSubmit
+  - could be GlideAjax
 
 
 # Client script code
